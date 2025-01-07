@@ -1,4 +1,4 @@
-# test
+# dexcom-rest
 
 To install dependencies:
 
