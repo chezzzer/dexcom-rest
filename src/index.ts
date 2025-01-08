@@ -2,7 +2,13 @@ import { dexcomClient } from "./inc/DexcomClient";
 import { fastify } from "./inc/Fastify";
 
 fastify.get('/', async (req, res) => {
-  return await dexcomClient.getEstimatedGlucoseValues();
+  const values = await dexcomClient.getEstimatedGlucoseValues();
+
+  if (values.length > 0) {
+    return values[0];
+  }
+
+  res.status(503).send();
 })
 
 try {
