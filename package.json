@@ -9,6 +9,7 @@
     "typescript": "^5.0.0"
   },
   "dependencies": {
+    "@fastify/cors": "^10.0.2",
     "dexcom-share-api": "^1.0.8",
     "fastify": "^5.2.1"
   }
